@@ -2,7 +2,32 @@
 
 **Read this in other languages**: ![uk](../../../images/uk.png) [English](README.md),  ![japan](../../../images/japan.png) [日本語](README.ja.md).
 
+Welcome to this Ansible 101 training.
+
+This training will take you through the basic knowledge and exercises to gain understanding how F5 BIG-IP can leverage Ansible to facilitate automated application services.
+
+Being a '101', this training will only cover:
+
+ - Exploring some Ansible basics.
+ - Gathering BIG-IP facts. 
+ - Creating BIG-IP objects like nodes, pool, virtual server and iRules.
+ - Disable pool member, delete configuration and error handling.
+ - Introduction of using AS3 with Ansible.
+
+After taking this course a student should be able to create simple playbooks for deploying application services on BIG-IP and be able to use AS3 with Ansible and push configurations through a playbook on the BIG-IP.
+
 Before you get started, please join us on slack! [Click here to join the ansiblenetwork slack](https://join.slack.com/t/ansiblenetwork/shared_invite/enQtMzEyMTcxMTE5NjM3LWIyMmQ4YzNhYTA4MjA2OTRhZDQzMTZkNWZlN2E3NzhhMWQ5ZTdmNmViNjk2M2JkYzJjODhjMjVjMGUxZjc2MWE).  This will allow you to chat with other network automation engineers and get help after the workshops concludes.
+
+#### Pre-requisites
+To get the most out of this training, the student should already have some basic knowledge about the use of Ansible and BIG-IP.
+When you are completely new to Ansible it is recommended to start with the 2 hour [Ansible Quick Start](https://linuxacademy.com/cp/modules/view/id/288) training from Linux Academy.
+
+#### Introduction
+Ansible is an open-source automation engine for software provisioning, configuration management and application-deployment. It allows for agent-less system configuration, which means it does not deploy agents to nodes. Communication to those nodes works by using SSH and Python is a requirement on those managed nodes. This makes that communication to managed nodes can be secure. Python is used to support the modules which support the tasks which will get deployed by Ansible through the use of so-called playbooks. 
+
+When Ansible gets installed it will contain an initial 'Ansible configuration file' called ansible.cfg file which includes the inventory of hosts and where the library of modules can be found.
+
+Let's start to explore by walking through the steps.
 
 #### Step 1
 
@@ -29,7 +54,6 @@ ansible 2.6.2
 
 > Note: The Ansible version you see might differ from the above output
 
-
 This command gives you information about the version of Ansible, location of the executable, version of Python, search path for the modules and location of the `ansible configuration file`.
 
 #### Step 3
@@ -51,7 +75,7 @@ private_key_file = /home/student1/.ssh/aws-private.pem
 
 Note the following parameters within the `ansible.cfg` file:
 
- - `inventory`: shows the location of the ansible inventory being used
+ - `inventory`: shows the location of the Ansible inventory being used.
  - `private_key_file`: this shows the location of the private key used to login to devices
 
 #### Step 4
@@ -108,3 +132,4 @@ Go back to the home directory
 ```
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
+
