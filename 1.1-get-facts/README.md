@@ -114,7 +114,7 @@ Next, add the second `task`. This task will use the `debug` module to print the 
         password: "{{ansible_ssh_pass}}"
         server_port: 8443
         validate_certs: no
-      register: bigip_device_facts
+      register: device_facts
 
     - name: DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION
       debug:
