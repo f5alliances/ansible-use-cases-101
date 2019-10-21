@@ -141,14 +141,14 @@ Enter the following:
       validate_certs: "no"
       gather_subset:
        - ltm-pools
-    register: bigip_device_facts
+    register: device_facts
 
   - name: "View complete output"
-    debug: "msg={{bigip_device_facts}}"
+    debug: "msg={{device_facts}}"
 
   - name: "Show members belonging to pool"
     debug: "msg={{item}}"
-    loop: "{{bigip_device_facts.ltm_pools | json_query(query_string)}}"
+    loop: "{{device_facts.ltm_pools | json_query(query_string)}}"
     vars:
      query_string: "[?name=='http_pool'].members[*].name[]"
 ```
