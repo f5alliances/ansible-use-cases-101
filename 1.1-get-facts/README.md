@@ -57,12 +57,6 @@ Next, add the first `task`. This task will use the `bigip_device_facts` module t
 
 {% raw %}
 ``` yaml
----
-- name: GRAB F5 FACTS
-  hosts: f5
-  connection: local
-  gather_facts: no
-
 
   tasks:
 
@@ -96,25 +90,6 @@ Next, add the second `task`. This task will use the `debug` module to print the 
 
 {% raw %}
 ```yaml
----
-- name: GRAB F5 FACTS
-  hosts: f5
-  connection: local
-  gather_facts: no
-
-
-  tasks:
-
-    - name: COLLECT BIG-IP FACTS
-      bigip_device_facts:
-        gather_subset:
-         - system-info
-        server: "{{private_ip}}"
-        user: "{{ansible_user}}"
-        password: "{{ansible_ssh_pass}}"
-        server_port: 8443
-        validate_certs: no
-      register: device_facts
 
     - name: DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION
       debug:
@@ -141,27 +116,6 @@ Finally lets add two more tasks to get more specific info from facts gathered.
 
 {% raw %}
 ```yaml
----
-- name: GRAB F5 FACTS
-  hosts: f5
-  connection: local
-  gather_facts: no
-
-  tasks:
-    - name: COLLECT BIG-IP FACTS
-      bigip_device_facts:
-        gather_subset:
-         - system-info
-        server: "{{private_ip}}"
-        user: "{{ansible_user}}"
-        password: "{{ansible_ssh_pass}}"
-        server_port: 8443
-        validate_certs: no
-      register: device_facts
-
-    - name: DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION
-      debug:
-        var: device_facts
 
     - name: DISPLAY ONLY THE MAC ADDRESS
       debug:
