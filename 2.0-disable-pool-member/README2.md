@@ -39,7 +39,7 @@ Using your text editor of choice create a new file called `disable-pool-member.y
 
 ## Step 2:
 
-Enter the following play definition into `disable-pool-member.yml`:
+Copy and paste the following play definition into `disable-pool-member.yml`:
 
 <!-- {% raw %} -->
 ``` yaml
@@ -128,52 +128,10 @@ Add a tasks section and set a provider and start gathering pool facts and use th
 ```
 <!-- {% endraw %} -->
 
-Here is the explanation for the used variables.
+Most of what is happening in the playbook is known by now. Notice the `pause` where the playbook will ask you to make a choice. The options are to either disable all pool members or to select a pool member of choice.
+
 
 ## Step 5
-
-Next, add a task for the objective listed below:
-
-  - Display the pool information to the terminal window
-
-HINT:
-Find a way to `loop` on the output from the above step. Remember to also use the <a href="https://docs.ansible.com/ansible/latest/modules/debug_module.html" style="color: #000000">debug module</a>
-
-## Step 6
-
-Next, add a task for the objective listed below:
-
-  - Store the pool name as a fact
-
-HINT: An easy way to set fact variables within a Playbook dynamically is using the <a href="https://docs.ansible.com/ansible/latest/modules/set_fact_module.html" style="color: #000000">set_fact module</a></span>
-
-## Step 7
-
-Next, add a task for the objective listed below:
-
-  - Display members belonging to the pool
-
-HINT:
-Remember to use the <a href="https://docs.ansible.com/ansible/latest/modules/debug_module.html" style="color: #000000">debug</a></span> and refer <a href="../1.4-add-pool-members">Exercise 1.4</a>
-
-## Step 8
-
-Next, add a task for the objective listed below:
-
-  - Prompt the user to enter a Host:Port to disable a particular member or 'all' to disable all members
-
-HINT:
-Use the <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_prompts.html" style="color: #000000">prompts</a> module</a></span>
-
-## Step 9
-Next, add a task for the objective listed below:
-
-  - Read the prompt information and disable all members or a single member based on the input from the user
-
-HINT:
-Remember to use <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html" style="color: #000000"> when conditions and loops</a> and [BIG-IP pool member module](https://docs.ansible.com/ansible/latest/modules/bigip_pool_member_module.html)
-
-## Step 10
 Run the playbook - exit back into the command line of the control host and execute the following:
 
 ```
@@ -232,9 +190,55 @@ f5                         : ok=7    changed=2    unreachable=0    failed=0
 <!-- {% endraw %} -->
 
 # Solution
-The solution will be provided by the instructor if you are stuck.  The GUI should show something similar to the following with a black diamond indicating the specified node was forced offline.
 
-![f5bigip-gui](f5bigip-gui.png)
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-virtual-server.yml](https://github.com/gwolfis/ansible-use-cases-101/blob/master/2.0-disable-pool-member/disable-pool-member.yml).
+
+# Verifying the Solution
+
+The playbook output shows that disabling of host1:80 was selected. Your choice can be different, To see the disabled **pool member(s)**, login to the F5 load balancer with your web browser.
+
+>Grab the IP information for the F5 load balancer from the `/home/studentX/networking_workshop/lab_inventory/hosts` file, and type it in like so: https://X.X.X.X:8443/
+
+Login information for the BIG-IP:
+- username: admin
+- password: **provided by instructor** defaults to ansible
+
+The load balancer virtual server can be found by navigating the menu on the left.  Click on **Local Traffic**. then click on **Pools**, select **http_pool** and check out the **Members**.
+
+# Going Further
+
+Let's change the pool state back to its origin state.
+
+## Step 6
+
+```
+[student1@ansible ~]$ nano disable-pool-member.yml
+```
+
+Go to the section after `pause` where the choice of diabling pool members is made. Within the Ansible network module called `bigip_pool_member`, change the parameter `state` to enabled and save your changes.
+
+## Step 7
+
+Re-run the playbook:
+
+```
+[student1@ansible ~]$ ansible-playbook disable-pool-member.yml
+```
+
+Be sure to `enable` what you have disbled in the previous action.
+
+# Verifying the Solution
+
+To see the enabled **pool member(s)**, login to the F5 load balancer with your web browser.
+
+>Grab the IP information for the F5 load balancer from the `/home/studentX/networking_workshop/lab_inventory/hosts` file, and type it in like so: https://X.X.X.X:8443/
+
+Login information for the BIG-IP:
+- username: admin
+- password: **provided by instructor** defaults to ansible
+
+The load balancer virtual server can be found by navigating the menu on the left.  Click on **Local Traffic**. then click on **Pools**, select **http_pool** and check out the **Members**.
+
 
 --
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
