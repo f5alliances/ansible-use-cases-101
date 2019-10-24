@@ -89,7 +89,7 @@ Throughout this exercise we will use three files.
     },
     "new_asm_policy": {
       "class": "WAF_Policy",
-      "url": "https://raw.githubusercontent.com/payalsin/f5_sandbox/master/exercises/ansible_f5/3.3-as3-asm/Test_WAF_Policy.xml",
+      "url": "https://github.com/f5alliances/ansible-use-cases-101/blob/master/3.3-as3-asm/Test_WAF_Policy.xml",
       "ignoreChanges": true
    }
 }
