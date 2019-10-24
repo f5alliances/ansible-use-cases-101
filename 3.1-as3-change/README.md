@@ -42,7 +42,7 @@ Using your text editor of choice open the existing jinja template `as3_template.
 
 ## Step 3:
 
-Find where the port **443** is and modify it to port **80**.
+Find where the port **443** is and modify it to port **80**. Hint: use the previous exercise to understand where to look.
 
 The line looks as follows->
 {% raw %}
