@@ -204,7 +204,7 @@ f5                         : ok=7    changed=2    unreachable=0    failed=0
 <!-- {% endraw %} -->
 
 # Solution
-The solution will be provided by the instructor if you are stuck.  The GUI should show something similar to the following with a black diamond indicating the specified node was forced offline.
+The finished Ansible Playbook is provided here for an Answer key. Click here: [disable-pool-member.yml] (../disable-pool-member.yml)
 
 ![f5bigip-gui](f5bigip-gui.png)
 
