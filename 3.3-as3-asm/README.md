@@ -16,7 +16,7 @@ Demonstrate building an Application Service through an AS3 declaration where a W
 
 # Guide
 
-#### Make sure the BIG-IP configuration is clean, run exercise 3.2-as3-delete before proceeding
+#### Make sure the BIG-IP configuration is clean, run `exercise 3.2-as3-delete` before proceeding
 
 ## Step 1:
 
@@ -98,7 +98,7 @@ Throughout this exercise we will use three files.
 <!-- {% endraw %} -->
 
 
-Most of the template is already explained in exercise 3.0-as3-intro. Compared to the original a WAF policy has been added to the as3_template.j2 schema.
+Most of the template is already explained in exercise `3.0-as3-intro`. Compared to the original a WAF policy has been added to the as3_template.j2 schema.
 The AS3_template.j2 now includes a new class **WAF_Policy** called `new_asm_policy`.
  - `url` defines the URL where to pull the ASM policy from.
  
@@ -136,7 +136,7 @@ Enter the following play definition into `waf-as3.yml`:
 
 ## Step 5
 
-**Append** the following to the waf-as3.yml Playbook.  
+**Append** the following to the asm-as3.yml Playbook.  
 
 <!-- {% raw %} -->
 ```
@@ -162,7 +162,7 @@ Enter the following play definition into `waf-as3.yml`:
 The provider gets set and the ASM module gets provisioned to level 'nominal.
 
 ## Step 6
-**Append** the following to the waf-as3.yml playbook.
+**Append** the following to the asm-as3.yml playbook.
 
 <!-- {% raw %} -->
 ```
@@ -176,7 +176,7 @@ The provider gets set and the ASM module gets provisioned to level 'nominal.
 
 ## Step 6
 
-**Append** the following to the waf-as3.yml Playbook.  
+**Append** the following to the asm-as3.yml Playbook.  
 
 <!-- {% raw %} -->
 ```
@@ -204,7 +204,7 @@ Run the playbook - exit back into the command line of the control host and execu
 
 <!-- {% raw %} -->
 ```
-[student1@ansible ~]$ ansible-playbook waf-as3.yml
+[student1@ansible ~]$ ansible-playbook asm_as3.yml
 ```
 <!-- {% endraw %} -->
 
@@ -236,7 +236,7 @@ f5                         : ok=4    changed=1    unreachable=0    failed=0    s
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [waf-as3.yml](../waf-as3.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [asm_as3](../asm_as3.yml).
 
 # Verifying the Solution
 
