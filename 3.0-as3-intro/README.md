@@ -285,6 +285,7 @@ Login to the F5 with your web browser to see what was configured.  Grab the IP i
 3. On the top right, click on the drop down menu titled `Partition` and select WorkshopExample
 4. The Virtual Server `serviceMain` will be displayed.
 
+Note that the Virtual Server is unavailable ('Red'), this is on purpose.
 
 ----
 
