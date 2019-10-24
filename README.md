@@ -16,6 +16,7 @@ Login information for the BIG-IP:
  - [Exercise 1.5 - Adding a virtual server](1.5-add-virtual-server)  
  - [Exercise 1.6 - Adding and attaching an iRule to a virtual server](1.6-add-irules)
  - [Exercise 1.7 - Save the running configuration](1.7-save-running-config)
+ - [Exercise 1.8 - Virtual server facts](1.8-virtual-server-facts)
 
 ## Section 2 - Ansible F5 Operational/Advanced Exercises
 
@@ -28,6 +29,7 @@ Login information for the BIG-IP:
  - [Exercise 3.0 - Intro to AS3](3.0-as3-intro)  
  - [Exercise 3.1 - Operational Change with AS3](3.1-as3-change)
  - [Exercise 3.2 - Deleting a Web Application](3.2-as3-delete)
+ - [Exercise 3.3 - Deploying WAF through AS3](3.3-as3-asm)
 
 ## Section 4 - Ansible Tower F5  Exercises
 
