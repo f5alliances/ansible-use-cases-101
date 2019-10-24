@@ -121,28 +121,6 @@ Next, add the `task`. This task will use the `bigip_virtual_server` to add attac
 
 {% raw %}
 ``` yaml
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
-
-  vars:
-   irules: ['irule1','irule2']
-
-  tasks:
-
-  - name: ADD iRules
-    bigip_irule:
-      server: "{{private_ip}}"
-      user: "{{ansible_user}}"
-      password: "{{ansible_ssh_pass}}"
-      server_port: "8443"
-      validate_certs: "no"
-      module: "ltm"
-      name: "{{item}}"
-      content: "{{lookup('file','{{item}}')}}"
-    loop: "{{irules}}"
 
   - name: ATTACH iRules TO EXISTING VIRTUAL SERVER
     bigip_virtual_server:
