@@ -56,15 +56,16 @@ Add a tasks section with a set_fact for setting the provider values
   connection: local
   gather_facts: false
 
-tasks:
-    - name: Setup provider
-      set_fact:
-       provider:
-        server: "{{private_ip}}"
-        user: "{{ansible_user}}"
-        password: "{{ansible_ssh_pass}}"
-        server_port: "8443"
-        validate_certs: "no"
+  tasks:
+  - name: Setup provider
+    set_fact:
+     provider:
+      server: "{{private_ip}}"
+      user: "{{ansible_user}}"
+      password: "{{ansible_ssh_pass}}"
+      server_port: "8443"
+      validate_certs: "no"
+
 ```
 {% endraw %}
 
@@ -80,11 +81,22 @@ Next, add the first `task` using the [bigip_virtual_server](https://docs.ansible
   connection: local
   gather_facts: false
 
+  tasks:
+  - name: Setup provider
+    set_fact:
+     provider:
+      server: "{{private_ip}}"
+      user: "{{ansible_user}}"
+      password: "{{ansible_ssh_pass}}"
+      server_port: "8443"
+      validate_certs: "no"
+
   - name: DELETE VIRTUAL SERVER
     bigip_virtual_server:
       provider: "{{provider}}"
       name: "vip"
       state: absent
+
 ```
 {% endraw %}
 - `state: absent` is a parameter that tells the module to delete the configuration
@@ -102,6 +114,14 @@ Next, add the second `task` using the [bigip_pool](https://docs.ansible.com/ansi
   gather_facts: false
 
   tasks:
+  - name: Setup provider
+    set_fact:
+     provider:
+      server: "{{private_ip}}"
+      user: "{{ansible_user}}"
+      password: "{{ansible_ssh_pass}}"
+      server_port: "8443"
+      validate_certs: "no"
 
   - name: DELETE VIRTUAL SERVER
     bigip_virtual_server:
@@ -111,9 +131,10 @@ Next, add the second `task` using the [bigip_pool](https://docs.ansible.com/ansi
 
   - name: DELETE POOL
     bigip_pool:
-     provider: "{{provider}}"
+      provider: "{{provider}}"
       name: "http_pool"
       state: absent
+
 ```
 {% endraw %}
 
@@ -130,6 +151,14 @@ Finally, add the last `task` using the [bigip_node](https://docs.ansible.com/ans
   gather_facts: false
 
   tasks:
+  - name: Setup provider
+    set_fact:
+     provider:
+      server: "{{private_ip}}"
+      user: "{{ansible_user}}"
+      password: "{{ansible_ssh_pass}}"
+      server_port: "8443"
+      validate_certs: "no"
 
   - name: DELETE VIRTUAL SERVER
     bigip_virtual_server:
@@ -149,9 +178,11 @@ Finally, add the last `task` using the [bigip_node](https://docs.ansible.com/ans
       name: "{{hostvars[item].inventory_hostname}}"
       state: absent
     loop: "{{ groups['webservers'] }}"
+~
+
 ```
 {% endraw %}
-The above playbook will delete the virtual server, then the pool and then the nodes configured in previous exercises.
+The above playbook will delete the virtual server, then the pool and then the nodes configured in previous exercises. Please note the order of the playbooks and that this is mandatory to have the configuration removed in the right order.
 
 ## Step 7
 
