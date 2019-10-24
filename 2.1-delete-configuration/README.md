@@ -50,11 +50,6 @@ Add a tasks section with a set_fact for setting the provider values
 
 {% raw %}
 ```
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
 
   tasks:
   - name: Setup provider
@@ -75,21 +70,6 @@ Next, add the first `task` using the [bigip_virtual_server](https://docs.ansible
 
 {% raw %}
 ``` yaml
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
-
-  tasks:
-  - name: Setup provider
-    set_fact:
-     provider:
-      server: "{{private_ip}}"
-      user: "{{ansible_user}}"
-      password: "{{ansible_ssh_pass}}"
-      server_port: "8443"
-      validate_certs: "no"
 
   - name: DELETE VIRTUAL SERVER
     bigip_virtual_server:
@@ -107,27 +87,6 @@ Next, add the second `task` using the [bigip_pool](https://docs.ansible.com/ansi
 
 {% raw %}
 ```yaml
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
-
-  tasks:
-  - name: Setup provider
-    set_fact:
-     provider:
-      server: "{{private_ip}}"
-      user: "{{ansible_user}}"
-      password: "{{ansible_ssh_pass}}"
-      server_port: "8443"
-      validate_certs: "no"
-
-  - name: DELETE VIRTUAL SERVER
-    bigip_virtual_server:
-      provider: "{{provider}}"
-      name: "vip"
-      state: absent
 
   - name: DELETE POOL
     bigip_pool:
@@ -144,33 +103,6 @@ Finally, add the last `task` using the [bigip_node](https://docs.ansible.com/ans
 
 {% raw %}
 ```yaml
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
-
-  tasks:
-  - name: Setup provider
-    set_fact:
-     provider:
-      server: "{{private_ip}}"
-      user: "{{ansible_user}}"
-      password: "{{ansible_ssh_pass}}"
-      server_port: "8443"
-      validate_certs: "no"
-
-  - name: DELETE VIRTUAL SERVER
-    bigip_virtual_server:
-      provider: "{{provider}}"
-      name: "vip"
-      state: absent
-
-  - name: DELETE POOL
-    bigip_pool:
-      provider: "{{provider}}"
-      name: "http_pool"
-      state: absent
 
   - name: DELETE NODES
     bigip_node:
