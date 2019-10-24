@@ -48,11 +48,6 @@ Next, add the first `task`. This task will use the `bigip_node` module configure
 
 <!-- {% raw %} -->
 ``` yaml
----
-- name: BIG-IP SETUP
-  hosts: lb
-  connection: local
-  gather_facts: false
 
   tasks:
 
