@@ -272,7 +272,7 @@ f5                         : ok=2    changed=0    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [as3.yml](https://github.com/network-automation/linklight/blob/master/exercises/ansible_f5/3.0-as3-intro/as3.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [as3.yml](../3.0-as3-intro/as3.yml).
 
 # Verifying the Solution
 
