@@ -16,7 +16,7 @@ Demonstrate building an Application Service through an AS3 declaration where a W
 
 # Guide
 
-#### Make sure the BIG-IP configuration is clean, run `exercise 3.2-as3-delete` before proceeding
+#### Make sure the BIG-IP configuration is clean, run exercise 3.2-as3-delete before proceeding
 
 ## Step 1:
 
@@ -98,7 +98,7 @@ Throughout this exercise we will use three files.
 <!-- {% endraw %} -->
 
 
-Most of the template is already explained in exercise `3.0-as3-intro`. Compared to the original a WAF policy has been added to the as3_template.j2 schema.
+Most of the template is already explained in exercise 3.0-as3-intro. Compared to the original a WAF policy has been added to the as3_template.j2 schema.
 The AS3_template.j2 now includes a new class **WAF_Policy** called `new_asm_policy`.
  - `url` defines the URL where to pull the ASM policy from.
  
