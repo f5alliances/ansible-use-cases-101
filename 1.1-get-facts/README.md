@@ -235,7 +235,7 @@ f5                         : ok=4    changed=1    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here for [bigip-facts.yml](https://https://github.com/f5alliances/ansible-use-cases-101/blob/master/1.1-get-facts/bigip-facts.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here for [bigip-facts.yml](../bigip-facts.yml).
 
 # Going Further
 
