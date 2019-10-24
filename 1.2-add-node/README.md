@@ -104,7 +104,7 @@ f5                         : ok=1    changed=1    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-node.yml](https://github.com/network-automation/linklight/blob/master/exercises/ansible_f5/1.2-add-node/bigip-node.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-node.yml](../bigip-node.yml).
 
 # Verifying the Solution
 
