@@ -225,7 +225,7 @@ Re-run the playbook:
 [student1@ansible ~]$ ansible-playbook disable-pool-member.yml
 ```
 
-Be sure to `enable` what you have disbled in the previous action.
+Be sure to `enable` what you have disabled in the previous action.
 
 # Verifying the Solution
 
