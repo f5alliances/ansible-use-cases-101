@@ -89,7 +89,7 @@ f5                         : ok=2    changed=0    unreachable=0    failed=0
 
 # Solution
 
-The fixed Jinja template is provided here for an Answer key.  Click here: [as3_template.j2](https://github.com/network-automation/linklight/blob/master/exercises/ansible_f5/3.1-as3-change/j2/as3_template.j2).
+The fixed Jinja template is provided here for an Answer key.  Click here: [as3_template.j2](../j2/as3_template.j2).
 
 # Verifying the Solution
 
