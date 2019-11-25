@@ -95,8 +95,6 @@ The fixed Jinja template is provided here for an Answer key.  Click here: [as3_t
 
 Login to the F5 with your web browser to see what was configured.  Grab the IP information for the F5 load balancer from the lab_inventory/hosts file, and type it in like so: https://X.X.X.X:8443/
 
-![f5 gui as3](as3-fix.gif)
-
 1. Click on the Local Traffic on the lefthand menu
 2. Click on Virtual Servers.
 3. On the top right, click on the drop down menu titled `Partition` and select WorkshopExample
