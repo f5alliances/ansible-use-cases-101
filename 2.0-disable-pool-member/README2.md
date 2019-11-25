@@ -191,7 +191,7 @@ f5                         : ok=7    changed=2    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [disable-pool-member.yml](../disable-pool-member.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [disable-pool-member.yml](../2.0-disable-pool-member/disable-pool-member.yml).
 
 # Verifying the Solution
 
