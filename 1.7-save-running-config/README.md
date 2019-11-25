@@ -107,6 +107,6 @@ f5                         : ok=1    changed=1    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-config.yml](../1.7-save-running-config/bigip-config.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-config.yml](https://github.com/f5alliances/ansible-use-cases-101/blob/master/1.7-save-running-config/bigip-config.yml).
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
