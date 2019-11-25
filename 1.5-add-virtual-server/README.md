@@ -139,9 +139,8 @@ Each RHEL web server actually already has apache running.  Exercise 1.1 through 
 
 >This time use port 443 instead of 8443, e.g. https://X.X.X.X:443/
 
-Each time you refresh the host will change between **host1** and **host2**. Here is animation of the host field changing:
-![animation](animation.gif)
->the animation might not work on certain browsers
+Each time you refresh the host will change between **host1** and **host2**. 
+
 
 ## Alternate Verification Method
 
