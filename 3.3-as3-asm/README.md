@@ -236,7 +236,7 @@ f5                         : ok=4    changed=1    unreachable=0    failed=0    s
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [asm_as3](../asm_as3.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [asm_as3](../3.3-as3-asm/asm_as3.yml).
 
 # Verifying the Solution
 
