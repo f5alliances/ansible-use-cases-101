@@ -186,7 +186,7 @@ f5                         : ok=2    changed=1    unreachable=0    failed=0
 ```
 
 # Solution
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-pool-members.yml](../bigip-pool-members.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-pool-members.yml](../1.4-add-pool-members/bigip-pool-members.yml).
 
 # Verifying the Solution
 
