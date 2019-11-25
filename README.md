@@ -39,6 +39,6 @@ Login information for the BIG-IP:
  - [Exercise 4.3 - Create a node maintenance Workflow](4.3-tower-workflow2)
 
 ### To start a discussion or to post a question related to the workshop use link:
-  - **https://devcentral.f5.com/questions/f5-ansible-automation-discussion-63579**
+  - **https://github.com/f5alliances/ansible-use-cases-101/issues**
 
 ---
