@@ -410,6 +410,6 @@ f5                         : ok=6    changed=1    unreachable=0    failed=0    s
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-virtual-server-facts.yml](../bigip-virtual-server-facts.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-virtual-server-facts.yml](../1.8-virtual-server-facts/bigip-virtual-server-facts.yml).
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
