@@ -169,7 +169,7 @@ f5                         : ok=2    changed=2    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-irule.yml](https://github.com/network-automation/linklight/blob/master/exercises/ansible_f5/1.6-add-irules/bigip-irule.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-irule.yml](../1.6-add-irules/bigip-irule.yml).
 
 # Verifying the Solution
 
