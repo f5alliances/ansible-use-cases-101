@@ -282,6 +282,7 @@ Run the playbook - exit back into the command line of the control host and execu
 
 # Playbook Output
 
+{% raw %}
 ```yaml
 PLAY [GET F5 FACTS] **************************************************************
 
