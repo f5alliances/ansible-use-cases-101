@@ -115,6 +115,5 @@ Login information for the BIG-IP:
 - password: ansible
 
 The list of nodes can be found by navigating the menu on the left.  Click on Local Traffic-> then click on Nodes.
-![f5web](nodes.png)
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
