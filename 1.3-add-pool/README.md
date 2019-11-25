@@ -121,6 +121,5 @@ Login information for the BIG-IP:
 - password: **provided by instructor, defaults to ansible**
 
 The load balancer pool can be found by navigating the menu on the left.  Click on Local Traffic-> then click on Pools.
-![f5pool](pool.png)
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
