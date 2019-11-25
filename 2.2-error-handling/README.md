@@ -491,6 +491,6 @@ f5                         : ok=8    changed=6    unreachable=0    failed=1
 {% endraw %}
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-error-handling.yml](../2.2-error-handling/bigip-error-handling.yml).
+The finished Ansible Playbook is provided here for an Answer key.  Click here: [bigip-error-handling.yml](https://github.com/f5alliances/ansible-use-cases-101/blob/master/2.2-error-handling/bigip-error-handling.yml).
 
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
