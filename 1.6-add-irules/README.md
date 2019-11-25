@@ -138,7 +138,7 @@ Next, add the `task`. This task will use the `bigip_virtual_server` to add attac
 - `irules: "{{irules}}` is a list of irules to be attached to the virtual server 'irule1' and 'irule2'
 
 Details of [BIG-IP virtual_Server module](https://docs.ansible.com/ansible/latest/modules/bigip_irule_module.html)
-or reference [Exercise 1.5](../bigip-virtual-server.yml)
+or reference [Exercise 1.5](../1.5-add-virtual-server)
 
 ## Step 6
 
