@@ -48,7 +48,6 @@ Enter the following play definition into `bigip-virtual-server-facts.yml`:
 
 Next, add the `task`. This task will set the 'provider' facts and use `bigip_device_facts` to collect virtual server object information in a variable.
 
-{% raw %}
 ``` yaml
 ---
 - name: BIG-IP SETUP
@@ -82,7 +81,6 @@ Next, add the `task`. This task will set the 'provider' facts and use `bigip_dev
         var: facts_result
         
 ```
-{% endraw %}
 
 
 >A play is a list of tasks. Tasks and modules have a 1:1 correlation.  Ansible modules are reusable, standalone scripts that can be used by the Ansible API, or by the ansible or ansible-playbook programs. They return information to ansible by printing a JSON string to stdout before exiting.
@@ -217,13 +215,11 @@ PLAY RECAP *********************************************************************
 f5                         : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 ```
-
 ## Step 5
 The result of the variable facts_result is shown in the playbook output. This output will get used to find the more specific information we want to obtain.
 
 Next, add underneath yaml file to the bottom of the bigip-virtual-server-facts.yml playbook.
 
-{% raw %}
 ``` yaml
 
     - name: Display all VIP's available
@@ -261,7 +257,6 @@ Next, add underneath yaml file to the bottom of the bigip-virtual-server-facts.y
        query_string: "[?name=='{{first_vip_name}}'].profiles[*].name"
         
 ```
-{% endraw %}
 
 Explanation  of the used functions:
 - `name: "Display all VIP's available" ` is a user defined description that will display in the terminal output.
@@ -282,7 +277,6 @@ Run the playbook - exit back into the command line of the control host and execu
 
 # Playbook Output
 
-{% raw %}
 ```yaml
 PLAY [GET F5 FACTS] **************************************************************
 
@@ -405,7 +399,6 @@ ok: [f5] => (item=[u'clientssl', u'http', u'oneconnect', u'tcp']) =>
 PLAY RECAP ***********************************************************************
 f5                         : ok=6    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
 ```
-{% endraw %}
 
 
 
