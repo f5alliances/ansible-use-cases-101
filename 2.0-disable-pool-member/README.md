@@ -206,7 +206,5 @@ f5                         : ok=7    changed=2    unreachable=0    failed=0
 # Solution
 The solution will be provided by the instructor if you are stuck.  The GUI should show something similar to the following with a black diamond indicating the specified node was forced offline.
 
-![f5bigip-gui](f5bigip-gui.png)
-
 --
 You have finished this exercise.  [Click here to return to the lab guide](../README.md)
