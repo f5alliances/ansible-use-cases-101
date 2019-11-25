@@ -155,7 +155,7 @@ f5                         : ok=4    changed=3    unreachable=0    failed=0
 
 # Solution
 
-The finished Ansible Playbook is provided here for an Answer key. Click here: [bigip-delete-configuration.yml](../bigip-delete-configuration.yml).
+The finished Ansible Playbook is provided here for an Answer key. Click here: [bigip-delete-configuration.yml](../2.1-delete-configuration/bigip-delete-configuration.yml).
 
 # Verifying the Solution
 
