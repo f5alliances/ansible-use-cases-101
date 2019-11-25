@@ -16,7 +16,7 @@ Being a '101', this training will only cover:
 
 After taking this course a student should be able to create simple playbooks for deploying application services on BIG-IP and be able to use AS3 with Ansible and push configurations through a playbook on the BIG-IP.
 
-Before you get started, please join us on slack! [Click here to join the ansiblenetwork slack](https://join.slack.com/t/ansiblenetwork/shared_invite/enQtMzEyMTcxMTE5NjM3LWIyMmQ4YzNhYTA4MjA2OTRhZDQzMTZkNWZlN2E3NzhhMWQ5ZTdmNmViNjk2M2JkYzJjODhjMjVjMGUxZjc2MWE).  This will allow you to chat with other network automation engineers and get help after the workshops concludes.
+ `Note: If you have any questions or issues, don't hesitate to open an issue to ask for help!` [Click here to open an issue](https://github.com/f5alliances/ansible-use-cases-101/issues).
 
 #### Pre-requisites
 To get the most out of this training, the student should already have some basic knowledge about the use of Ansible and BIG-IP.
