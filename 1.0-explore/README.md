@@ -23,7 +23,7 @@ To get the most out of this training, the student should already have some basic
 When you are completely new to Ansible it is recommended to start with the 2 hour [Ansible Quick Start](https://linuxacademy.com/cp/modules/view/id/288) training from Linux Academy.
 
 #### Lab Environment
-This Ansible 101 training comes with a pre-configured lab environment. Please go [here](https://github.com/f5alliances/f5_provisioner/tree/master/docker) to provision your lab environment.
+This Ansible 101 training comes with a pre-configured lab environment. Please go [here](https://github.com/f5alliances/f5_provisioner) to provision your lab environment.
 
 #### Introduction
 Ansible is an open-source automation engine for software provisioning, configuration management and application-deployment. It allows for agent-less system configuration, which means it does not deploy agents to nodes. Communication to those nodes works by using SSH and Python is a requirement on those managed nodes. This makes that communication to managed nodes can be secure. Python is used to support the modules which support the tasks which will get deployed by Ansible through the use of so-called playbooks. 
