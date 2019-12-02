@@ -77,8 +77,6 @@ Next, add the first ``task``. This task will use the
 ``bigip_device_facts`` module to grab useful information from the BIG-IP
 device.
 
-{% raw %}
-
 .. code:: yaml
 
 
@@ -95,7 +93,6 @@ device.
             validate_certs: no
           register: device_facts
 
-{% endraw %}
 
     A play is a list of tasks. Tasks and modules have a 1:1 correlation.
     Ansible modules are reusable, standalone scripts that can be used by
@@ -129,7 +126,6 @@ Next, add the second ``task``. This task will use the ``debug`` module
 to print the output from device\_facts variable we registered the facts
 to.
 
-{% raw %}
 
 .. code:: yaml
 
@@ -138,7 +134,6 @@ to.
           debug:
             var: device_facts
 
-{% endraw %}
 
 -  The ``name: COMPLETE BIG-IP SYSTEM INFORMATION`` is a user defined
    description that will display in the terminal output.
@@ -162,8 +157,6 @@ Step 6
 Finally lets add two more tasks to get more specific info from facts
 gathered.
 
-{% raw %}
-
 .. code:: yaml
 
 
@@ -175,7 +168,6 @@ gathered.
           debug:
             var: device_facts['system_info']['product_version']
 
-{% endraw %}
 
 -  ``var: device_facts['system_info']['base_mac_address']`` displays the
    MAC address for the BIG-IP device
@@ -204,7 +196,6 @@ Playbook Output
 
 The output will look as follows.
 
-{% raw %}
 
 .. code:: yaml
 
@@ -289,7 +280,6 @@ The output will look as follows.
     PLAY RECAP **************************************************************************************************************************************************
     f5                         : ok=4    changed=1    unreachable=0    failed=0
 
-{% endraw %}
 
 Solution
 ========
